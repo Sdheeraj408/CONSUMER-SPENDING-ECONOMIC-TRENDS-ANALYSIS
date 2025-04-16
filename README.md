@@ -1,64 +1,73 @@
-Consumer Spending & Economic Trends Analysis
-Project Title:
-Consumer Spending and Economic Trends: A Data-Driven Analysis Using Affinity Insights
+# Consumer Spending & Economic Trends Analysis
 
-Overview:
-In this project, I performed an end-to-end data analysis to explore, model, and forecast U.S. consumer spending behavior using high-frequency transaction data sourced from the Opportunity Insights Economic Tracker. The goal was to understand how consumer spending varies by income levels, geographic locations, and economic events—such as the COVID-19 crash and recovery—and to build robust forecasting models for economic trend prediction.
+**Project Title:**  
+**Consumer Spending and Economic Trends: A Data-Driven Analysis Using Affinity Insights**
 
-Key Objectives
-Analyze consumer spending behavior across four income quartiles.
+## Overview
+This project analyzes U.S. consumer spending behavior using high-frequency transaction data from the [Opportunity Insights Economic Tracker](https://opportunityinsights.org). The analysis focuses on spending across income levels, essential vs. non-essential categories, and different economic phases (e.g., COVID crash, recovery, inflation). The project integrates traditional statistical testing with machine learning and deep learning models to forecast future trends and derive actionable insights.
 
-Compare essential vs. non-essential spending patterns.
+---
 
-Identify long-term and seasonal trends.
+## Key Objectives
+- Forecast future consumer spending using time series models.
+- Explore behavioral differences across income groups.
+- Identify long-term, seasonal, and volatility trends in spending.
+- Analyze essential vs. non-essential spending patterns.
 
-Predict future consumer spending using time series models.
+---
 
-Tools & Technologies
-Languages & IDEs: Python, Jupyter Notebook, Excel
+## Tools & Technologies
+- **Languages & IDEs:** Python, Jupyter Notebook, Excel  
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn, TensorFlow/Keras, Prophet  
+- **Models Used:** ARIMA, Prophet, LSTM, Transformer  
+- **Statistical Tests:** Paired t-test, Wilcoxon signed-rank, Cohen’s d  
+- **Techniques:** STL decomposition, ACF/PACF analysis
 
-Libraries & Frameworks: Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn, TensorFlow, Prophet
+---
 
-Models Used: ARIMA, Prophet, LSTM, Transformer
+## Workflow Summary
 
-Statistical Techniques: Paired t-test, Wilcoxon signed-rank test, Cohen’s d, STL decomposition
+### Data Collection
+- Dataset: Affinity consumer transaction data (2018–2024)  
+- ~50,000 records with ZIP-level aggregation and income quartile segmentation
 
-Project Workflow
-Data Collection: Pulled 50,000+ records of consumer transaction data aggregated by ZIP code and income group (2018–2024).
+### Data Preprocessing
+- Created date features from raw columns
+- Cleaned and imputed missing values using interpolation + fill methods
+- Filtered to focus on post-2020 recovery phase
 
-Data Preprocessing: Created time features, addressed missing values using linear interpolation and fill methods, and filtered the dataset to focus on post-pandemic trends.
+###  Exploratory Data Analysis
+- Histograms, boxplots, time-series plots
+- Segmentation by income (Q1–Q4) and category (essential vs. non-essential)
+- Economic phase analysis: COVID crash, recovery, inflation, stabilization
 
-Exploratory Data Analysis: Visualized trends, spending distributions, and phase-based transitions (COVID crash, inflation, recovery).
+### Modeling
+| Model       | Dataset Type     | RMSE     |
+|-------------|------------------|----------|
+| ARIMA       | Full             | 0.0079   |
+| ARIMA       | Recovery Phase   | 0.0088   |
+| Prophet     | Full             | 0.0162   |
+| LSTM        | Full             | **0.0047** |
+| Transformer | Full             | 0.0246   |
 
-Segmentation: Divided spending into essential vs. non-essential categories and income quartiles (Q1–Q4).
+- **ARIMA**: Best for stable, structured recovery data  
+- **LSTM**: Most accurate for complex patterns across the full dataset  
+- **Prophet**: Captured holiday and seasonal effects  
+- **Transformer**: Handled long-term dependencies, moderate performance  
+---
+## Results & Insights
+- LSTM provided the most accurate forecasts for dynamic spending trends.
+- ARIMA excelled in modeling recovery-phase patterns.
+- Low-income households (Q1) consistently outspent high-income (Q4) during recovery.
+- Non-essential spending differences were more significant than essentials between income groups.
+- Seasonal trends (e.g., holiday spending) normalized by 2022 after COVID disruption.
+---
+##Key Takeaways
+- Time series forecasting combined with robust data preprocessing delivers valuable insights for both policy and business decisions.
+- Behavioral segmentation reveals critical drivers in economic recovery, especially from low-income consumer groups.
+- Merging traditional statistical methods with deep learning models offers a more holistic economic analysis framework.
+---
+## 🔗 Dataset Source
+[Opportunity Insights Economic Tracker](https://opportunityinsights.org)
 
-Modeling:
-
-ARIMA: Effective for short-term linear trend forecasting
-
-Prophet: Captured holiday and seasonality effects
-
-LSTM: Achieved the lowest RMSE (0.0047) on full data
-
-Transformer: Explored advanced sequence modeling with moderate results
-
-Performance Metrics: RMSE, MAE, MSE were used to evaluate and compare model performance.
-
-Results & Insights
-LSTM outperformed other models in predicting complex non-linear trends in full data.
-
-ARIMA excelled in forecasting within stabilized recovery-phase data.
-
-Low-income groups (Q1) consistently spent more than high-income groups (Q4) during economic recovery phases—challenging conventional assumptions.
-
-Spending trends across five defined economic phases revealed rapid recovery and stabilization post-pandemic.
-
-Statistically significant differences were observed between income quartiles across essential and non-essential categories.
-
-Key Takeaways
-Robust data preparation and time series forecasting can yield valuable economic insights from transaction-level data.
-
-Low-income household behavior plays a crucial role in driving consumer recovery post-economic disruptions.
-
-Combining traditional statistical techniques with deep learning offers a comprehensive approach to modeling financial behavior.
 
