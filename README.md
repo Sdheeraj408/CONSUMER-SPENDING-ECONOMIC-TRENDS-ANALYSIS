@@ -1,20 +1,20 @@
 # Consumer Spending & Economic Trends Analysis
 ## Overview
 - This project analyzes U.S. consumer spending behavior using high-frequency transaction data from the [Opportunity Insights Economic Tracker](https://opportunityinsights.org). The analysis focuses on spending across income levels, essential vs. non-essential categories, and different economic phases (e.g., COVID crash, recovery, inflation). The project integrates traditional statistical testing with machine learning and deep learning models to forecast future trends and derive actionable insights.
----
+
 ## Key Objectives
 - Forecast future consumer spending using time series models.
 - Explore behavioral differences across income groups.
 - Identify long-term, seasonal, and volatility trends in spending.
 - Analyze essential vs. non-essential spending patterns.
----
+
 ##  Tools & Technologies
 - **Languages & IDEs:** Python, Jupyter Notebook, Excel  
 - **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn, TensorFlow/Keras, Prophet  
 - **Models Used:** ARIMA, Prophet, LSTM, Transformer  
 - **Statistical Tests:** Paired t-test, Wilcoxon signed-rank, Cohen’s d  
 - **Techniques:** STL decomposition, ACF/PACF analysis
----
+  
 ##  Workflow Summary
 ###  Data Collection
 - Dataset: Affinity consumer transaction data (2018–2024)  
@@ -40,23 +40,23 @@
 - **LSTM**: Most accurate for complex patterns across the full dataset  
 - **Prophet**: Captured holiday and seasonal effects  
 - **Transformer**: Handled long-term dependencies, moderate performance  
----
+  
 ## Results & Insights
 - LSTM provided the most accurate forecasts for dynamic spending trends.
 - ARIMA excelled in modeling recovery-phase patterns.
 - Low-income households (Q1) consistently outspent high-income (Q4) during recovery.
 - Non-essential spending differences were more significant than essentials between income groups.
 - Seasonal trends (e.g., holiday spending) normalized by 2022 after COVID disruption.
----
+
 ##  Key Takeaways
 - Time series forecasting combined with robust data preprocessing delivers valuable insights for both policy and business decisions.
 - Behavioral segmentation reveals critical drivers in economic recovery, especially from low-income consumer groups.
 - Merging traditional statistical methods with deep learning models offers a more holistic economic analysis framework.
----
+
 ## Files
 - `Consumer_Spending_Analysis.ipynb` – Full code, EDA, modeling, and visualizations  
 - Visual outputs include trend graphs, seasonal decomposition, and income group comparisons  
----
+  
 ## Dataset Source
 [Opportunity Insights Economic Tracker](https://opportunityinsights.org)
 
