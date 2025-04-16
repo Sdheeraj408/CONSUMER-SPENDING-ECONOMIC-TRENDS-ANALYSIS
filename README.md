@@ -5,42 +5,32 @@
 
 ## Overview
 This project analyzes U.S. consumer spending behavior using high-frequency transaction data from the [Opportunity Insights Economic Tracker](https://opportunityinsights.org). The analysis focuses on spending across income levels, essential vs. non-essential categories, and different economic phases (e.g., COVID crash, recovery, inflation). The project integrates traditional statistical testing with machine learning and deep learning models to forecast future trends and derive actionable insights.
-
 ---
-
 ## Key Objectives
 - Forecast future consumer spending using time series models.
 - Explore behavioral differences across income groups.
 - Identify long-term, seasonal, and volatility trends in spending.
 - Analyze essential vs. non-essential spending patterns.
-
 ---
-
 ## Tools & Technologies
 - **Languages & IDEs:** Python, Jupyter Notebook, Excel  
 - **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn, TensorFlow/Keras, Prophet  
 - **Models Used:** ARIMA, Prophet, LSTM, Transformer  
 - **Statistical Tests:** Paired t-test, Wilcoxon signed-rank, Cohen’s d  
 - **Techniques:** STL decomposition, ACF/PACF analysis
-
 ---
-
 ## Workflow Summary
-
 ### Data Collection
 - Dataset: Affinity consumer transaction data (2018–2024)  
 - ~50,000 records with ZIP-level aggregation and income quartile segmentation
-
 ### Data Preprocessing
 - Created date features from raw columns
 - Cleaned and imputed missing values using interpolation + fill methods
 - Filtered to focus on post-2020 recovery phase
-
 ###  Exploratory Data Analysis
 - Histograms, boxplots, time-series plots
 - Segmentation by income (Q1–Q4) and category (essential vs. non-essential)
 - Economic phase analysis: COVID crash, recovery, inflation, stabilization
-
 ### Modeling
 | Model       | Dataset Type     | RMSE     |
 |-------------|------------------|----------|
@@ -69,5 +59,3 @@ This project analyzes U.S. consumer spending behavior using high-frequency trans
 ---
 ## 🔗 Dataset Source
 [Opportunity Insights Economic Tracker](https://opportunityinsights.org)
-
-
