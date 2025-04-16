@@ -1,2 +1,2 @@
-# Project
-Data Projects 
+# CONSUMER SPENDING & ECONOMIC TRENDS ANALYSIS
+
